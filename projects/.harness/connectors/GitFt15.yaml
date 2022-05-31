@@ -1,0 +1,24 @@
+connector:
+  name: GitFt15
+  identifier: GitFt15
+  description:
+  orgIdentifier: default
+  projectIdentifier: GitFt15
+  type: Github
+  spec:
+    url: https://github.com/VikasChowdary/GitFt15
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: Vikas
+          tokenRef: account.patForGithub
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: account.patForGithub
+    delegateSelectors:
+    - acctgroup
+    executeOnDelegate: true
+    type: Repo
